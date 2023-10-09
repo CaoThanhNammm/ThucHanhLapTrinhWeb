@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 6px;
+            outline: none;
+            border: 1px solid gray;
+            padding: 10px 12px;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            cursor: pointer;
+            border: 1px solid gray;
+            border-radius: 6px;
+            transition: 0.4s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border: 2px solid gray;
+        }
+
+        button:hover {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea placeholder="Text" style="margin-top: 0;" name="" id="" cols="30" rows="10"></textarea>
+        <input placeholder="Find text" type="text">
+        <h3 class="result"></h3>
+        <button>Click</button>
+    </div>
+</body>
+
+<script>
+    function kmpSearch(text, pattern) {
+        if (pattern.length == 0)
+            return 0; // Immediate match
+
+        // Compute longest suffix-prefix table
+        var lsp = [0]; // Base case
+        for (var i = 1; i < pattern.length; i++) {
+            var j = lsp[i - 1]; // Start by assuming we're extending the previous LSP
+            while (j > 0 && pattern[i] !== pattern[j])
+                j = lsp[j - 1];
+            if (pattern[i] === pattern[j])
+                j++;
+            lsp.push(j);
+        }
+
+        // Walk through text string
+        var j = 0; // Number of chars matched in pattern
+        for (var i = 0; i < text.length; i++) {
+            while (j > 0 && text[i] != pattern[j])
+                j = lsp[j - 1]; // Fall back in the pattern
+            if (text[i] == pattern[j]) {
+                j++; // Next char matched, increment position
+                if (j == pattern.length)
+                    return i - (j - 1);
+            }
+        }
+        return -1; // Not found
+    }
+
+
+    function amountOfSubText(text, subText) {
+        var count = 0;
+        while (kmpSearch(text, subText) != -1) {
+            count++;
+            text = text.replace(subText, "");
+        }
+        return count;
+    }
+
+    var elementText = document.querySelector("textarea");
+    var elementFindSubText = document.querySelector("input");
+    var elementSubmit = document.querySelector("button");
+    var elementResult = document.querySelector(".result");
+
+    elementSubmit.onclick = function () {
+        if(elementText.value != ""){
+            elementResult.innerHTML = `Số lần xuất hiện: ${amountOfSubText(elementText.value.trim().toLowerCase(), elementFindSubText.value.trim().toLowerCase())}`;
+        }
+    }
+
+
+</script>
+
+</html>

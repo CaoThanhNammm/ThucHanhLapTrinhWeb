@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; font-size: 50px;">
+    <h1></h1>
+</body>
+
+<script>
+    function randomIndex(min, max){
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    var color = 
+    ["green", "red", "blueviolet", "blue", "gray", "brown"];
+
+    var helloArray = 
+    ["Hello world!", "Hallo wereld!", "Привет, мир!", "Dia duit ar domhan!", "こんにちは、世界!"];
+
+    var elementHello = document.querySelector("h1");
+    elementHello.innerHTML = helloArray[randomIndex(0, helloArray.length)];
+    elementHello.style.color = color[randomIndex(0, color.length)]
+</script>
+</html>
