@@ -6,8 +6,8 @@
 .navigation {
     color: black;
     background-color: rgb(222, 222, 222);
-    border-left: 3px solid rgb(213, 36, 36);
-    border-bottom: 2px solid rgb(213, 36, 36);
+    border-left: 6px solid rgb(213, 36, 36);
+    border-bottom: 3px solid rgb(213, 36, 36);
 }
 
 .navigation__list {
@@ -79,4 +79,9 @@
 .child__item:hover a{
     color: white;
 }
+
+.child__list:first-child{
+    border-top: 3px solid rgb(213, 36, 36);;
+}
+
 
