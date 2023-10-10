@@ -15,7 +15,7 @@ var elementServiceItem = document.querySelectorAll(".service__list li");
 
 function chooseService(){
     elementServiceItem.forEach(function(value, index){
-        elementServiceItem[index].onclick = function(e){
+        value.onclick = function(e){
             elementSeviceChoose.innerHTML = value.innerText;
             elementSeviceChoose.style.color = "black";
         }

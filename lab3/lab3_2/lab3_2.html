@@ -5,77 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lab3_2.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-=======
->>>>>>> d3fea6f (Lab 3)
     <title>Document</title>
 </head>
 
 <body>
     <div class="page">
-<<<<<<< HEAD
         <div class="container">
             <form id="form">
                 <div class="form__header">
                     <h1 class="form__header__title">Contact Us</h1>
                 </div>
-    
+
                 <div class="form__container">
                     <div class="form__container--group">
-                        <div class="input">
-                            <label class="input__title" for="fullname">FULL NAME *</label>
-                            <input required type="name" name="fullname" id="fullname" title="fullname" placeholder="Enter Your Name">
-                        </div>
+                        <label for="fullname">FULL NAME *</span>
+                            <input type="name" name="fullname" id="fullname" title="fullname"
+                                placeholder="Enter Your Name">
                     </div>
-    
-                    <div class="form__container--group" style="display: flex;">
-                        <div class="input" style="margin-right: 20px;">
-                            <label class="input__title" for="email">EMAIL *</label>
-                            <input required type="email" id="email" placeholder="Enter Your Email">
+
+                    <div style="display: flex;">
+                        <div style="margin-right: 7px;" class="form__container--group">
+                            <label for="email">EMAIL *</label>
+                            <input type="email" id="email" placeholder="Enter Your Email">
                         </div>
-    
-                        <div class="input">
-                            <label class="input__title" for="phone">PHONE</label>
+
+                        <div style="margin-left: 7px;" class="form__container--group">
+                            <label for="phone">PHONE</label>
                             <input type="phone" id="phone" placeholder="Enter Number Phone">
                         </div>
                     </div>
-    
-    
-                    <div class="form__container--group servive">
-                        <label class="input__title">NEEDED SERVICES *</label>
 
-                        <span style="font-size: 16px;" class="services__default">
+                    <div class="form__container--group servive">
+                        <label>NEEDED SERVICES *</label>
+                        <span style="font-size: 15px; padding-top: 7px;" class="services__default">
                             Please chooses
-                        </span>
-                        
+                        </span>  
+
                         <div class="servive__icon">
-                            <i class="fa-solid fa-angle-up up"></i>
-                            <i class="fa-solid fa-angle-down down"></i>
+                            <i class="fa-solid fa-chevron-up fa-2xs up"></i>
+                            <i class="fa-solid fa-chevron-down fa-2xs down"></i>
                         </div>
 
                         <ul class="service__list">
-=======
-        <form id="form">
-            <div class="form__header">
-                <h1 class="form__header__title">Contact Us</h1>
-            </div>
-
-            <div class="form__container">
-                <div class="form__container--group">
-                    <input type="name" name="fullname" id="fullname" title="fullname" placeholder="Enter Your Name">
-                </div>
-
-                <div class="form__container--group" style="display: flex;">
-                    <input type="email" id="email" placeholder="Enter Your Email">
-                    <input type="phone" id="phone" placeholder="Enter Number Phone">
-                </div>
-
-                <div class="form__container--group servive">
-                    <span style="font-size: 16px;">
-                        Please chooses
-                        <ul>
->>>>>>> d3fea6f (Lab 3)
                             <li><a href="">option 1</a></li>
                             <li><a href="">option 2</a></li>
                             <li><a href="">option 3</a></li>
@@ -86,7 +58,6 @@
                             <li><a href="">option 8</a></li>
                             <li><a href="">option 9</a></li>
                             <li><a href="">option 10</a></li>
-<<<<<<< HEAD
                             <li><a href="">option 11</a></li>
                             <li><a href="">option 10</a></li>
                             <li><a href="">option 10</a></li>
@@ -95,13 +66,13 @@
                             <li><a href="">option 10</a></li>
                         </ul>
                     </div>
-    
-                    <div class="form__container--group textarea">
-                        <label for="ta" class="input__title">MESSAGE</label>
-                        <textarea placeholder="Your message here..." name="" id="ta" cols="30" rows="10"></textarea>
+
+                    <div class="form__container--group">
+                        <label for="message">MESSAGE</label>
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="Your message here"></textarea>
                     </div>
                 </div>
-    
+
                 <div class="form__footer">
                     <button>Submit</button>
                     <i class="fa-solid fa-arrow-right-long"></i>
@@ -109,30 +80,12 @@
             </form>
         </div>
     </div>
-
-    <script src="lab3_2.js"> </script>
-    <script>
-        clickService();
-    </script>
-    
-=======
-                        </ul>
-                    </span>
-                </div>
-
-                <div class="form__container--group">
-                    <textarea placeholder="Your message here..." name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-
-            <div class="form__footer">
-                <div>
-                    <button>Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
->>>>>>> d3fea6f (Lab 3)
 </body>
+
+<script src="lab3_2.js"></script>
+
+<script>
+    clickService();
+</script>
 
 </html>
