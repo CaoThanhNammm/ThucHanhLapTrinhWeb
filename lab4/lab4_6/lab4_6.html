@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab4_6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <form id="form">
+                <div class="form__header">
+                    <h1 class="form__header__title">Contact Us</h1>
+                </div>
+
+                <div class="form__container">
+                    <div class="form__container--group">
+                        <label for="fullname">FULL NAME *</span>
+                        <input type="name" name="fullname" id="fullname" title="fullname" placeholder="Enter Your Name">
+                        <p class="warning"></p>    
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="margin-right: 7px;" class="form__container--group">
+                            <label for="email">EMAIL *</label>
+                            <input type="email" id="email" placeholder="Enter Your Email">
+                            <p class="warning"></p>  
+                        </div>
+
+                        <div style="margin-left: 7px;" class="form__container--group">
+                            <label for="phone">PHONE</label>
+                            <input type="phone" id="phone" placeholder="Enter Number Phone">
+                        </div>
+                    </div>
+
+                    <div class="form__container--group servive">
+                        <label>NEEDED SERVICES *</label>
+                        <span id="services" style="font-size: 15px; padding-top: 7px;" class="services__default">
+                            Please chooses
+                        </span>
+
+                        <p class="warning"></p>
+                        <div class="servive__icon">
+                            <i class="fa-solid fa-chevron-up fa-2xs up"></i>
+                            <i class="fa-solid fa-chevron-down fa-2xs down"></i>
+                        </div>
+
+                        <ul class="service__list">
+                            <li><a href="">option 1</a></li>
+                            <li><a href="">option 2</a></li>
+                            <li><a href="">option 3</a></li>
+                            <li><a href="">option 4</a></li>
+                            <li><a href="">option 5</a></li>
+                            <li><a href="">option 6</a></li>
+                            <li><a href="">option 7</a></li>
+                            <li><a href="">option 8</a></li>
+                            <li><a href="">option 9</a></li>
+                            <li><a href="">option 10</a></li>
+                            <li><a href="">option 11</a></li>
+                            <li><a href="">option 10</a></li>
+                            <li><a href="">option 10</a></li>
+                            <li><a href="">option 10</a></li>
+                            <li><a href="">option 10</a></li>
+                            <li><a href="">option 10</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="form__container--group">
+                        <label for="message">MESSAGE</label>
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="Your message here"></textarea>
+                        <p class="warning"></p>
+                    </div>
+                </div>
+
+                <div class="form__footer" id="form__footer">
+                    <span id="submit">Submit</button>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="lab4_6.js"></script>
+
+<script>
+    clickService();
+    
+    validationOnInput("#fullname");
+    validationOnChange("#email");
+    validationOnInput("#email");
+
+    submit("#form__footer");
+</script>
+
+</html>
