@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .board{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .btn--active{
+            height: 50px;
+            width: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: burlywood;
+            border: none;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: 0.2s ease;
+        }
+
+        .btn--unActive{
+            height: 50px;
+            width: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            transition: 0.2s ease;
+            cursor: default;
+        }
+
+        .btn--active:hover{
+            color: white;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+</body>
+
+<script src="lab4_7.js"></script>
+<script>
+    run();
+</script>
+
+</html>
