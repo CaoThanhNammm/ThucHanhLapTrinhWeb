@@ -1,0 +1,20 @@
+package Lab5_2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class UserService {
+	private User user;
+	private Map<String, String> data = new HashMap<>();
+
+	
+	
+	public void add(String name, String password) {
+		if (data.containsKey(name)) {
+			System.out.println("Đã có tài khoản");
+			return;
+		}
+
+		data.put(name, password);
+	}
+}

@@ -1,0 +1,10 @@
+package Lab5_1;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class UserService {
+	Map<String, String> data = new HashMap<>();
+	
+	
+}
